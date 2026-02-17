@@ -16,8 +16,16 @@ A lightweight single-page app for:
 
 ## Run locally
 
+One command:
+
 ```bash
-python3 -m http.server 8000
+./run.sh
 ```
 
-Open `http://localhost:8000` in your browser.
+Optional custom port:
+
+```bash
+./run.sh 9000
+```
+
+Then open `http://localhost:8000` (or your custom port) in your browser.
