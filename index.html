@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Appointment & Admin Console</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Barber Appointment Registration</h1>
+        <p>Book your slot and let admins track and manage all appointments.</p>
+      </header>
+
+      <section class="card">
+        <h2>Customer Registration</h2>
+        <form id="appointment-form">
+          <label>
+            Full name
+            <input type="text" id="name" required />
+          </label>
+          <label>
+            Phone number
+            <input type="tel" id="phone" required />
+          </label>
+          <label>
+            Barber
+            <select id="barber" required>
+              <option value="">Choose a barber</option>
+              <option>Alex</option>
+              <option>Jordan</option>
+              <option>Taylor</option>
+              <option>Morgan</option>
+            </select>
+          </label>
+          <label>
+            Service
+            <select id="service" required>
+              <option value="">Choose a service</option>
+              <option>Haircut</option>
+              <option>Beard Trim</option>
+              <option>Haircut + Beard</option>
+              <option>Kids Cut</option>
+            </select>
+          </label>
+          <label>
+            Date
+            <input type="date" id="date" required />
+          </label>
+          <label>
+            Time
+            <input type="time" id="time" required />
+          </label>
+          <button type="submit">Register Appointment</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Admin Control</h2>
+        <form id="admin-login" class="admin-login">
+          <label>
+            Admin PIN
+            <input type="password" id="admin-pin" placeholder="Enter 1234" required />
+          </label>
+          <button type="submit">Access Dashboard</button>
+        </form>
+
+        <div id="admin-dashboard" class="hidden">
+          <div class="dashboard-top">
+            <p><strong>Total Appointments:</strong> <span id="appointment-count">0</span></p>
+            <button id="clear-all" class="danger">Clear All</button>
+          </div>
+          <ul id="appointment-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
